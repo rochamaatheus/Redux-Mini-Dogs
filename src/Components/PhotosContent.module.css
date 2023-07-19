@@ -1,0 +1,34 @@
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 3.125rem 1fr auto;
+  grid-template-rows: 3.125rem;
+  align-items: center;
+  gap: 1rem;
+  background-color: #f7f7f7;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  padding-right: 1rem;
+}
+
+.img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: normal;
+  margin: 0;
+}
+
+.acessos {
+  font-family: monospace;
+  font-size: 0.875rem;
+  color: #999;
+}
