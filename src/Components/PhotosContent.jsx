@@ -7,7 +7,7 @@ const PhotosContent = () => {
   return (
     <ul className={styles.list}>
       {list.map((photo) => (
-        <li key={photo.id} className={`${styles.item}`}>
+        <li key={photo.id} className={`${styles.item} anime`}>
           <img src={photo.src} alt={photo.title} className={styles.img} />
           <h2 className={styles.title}>{photo.title}</h2>
           <span className={styles.acessos}>{photo.acessos}</span>
