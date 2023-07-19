@@ -13,6 +13,12 @@ const photos = createAsyncSlice({
       state.pages++;
       if (action.payload.length === 0) state.infinite = false;
     },
+    removePhotos(state) {
+      state.pages = 0;
+      state.infinite = true;
+      state.list = [];
+      state.data = null;
+    },
   },
   fetchConfig: (page = 1) => ({
     url: `https://dogsapi.origamid.dev/json/api/photo/?_page=${page}&_total=3&_user=0`,
@@ -23,7 +29,7 @@ const photos = createAsyncSlice({
   }),
 });
 
-export const { addPhotos } = photos.actions;
+export const { addPhotos, removePhotos } = photos.actions;
 export const fetchPhotos = photos.asyncAction;
 
 export const loadNewPhotos =
