@@ -12,6 +12,7 @@
 }
 
 .login {
+  display: block;
   cursor: pointer;
   padding: 0;
   margin: 0;
@@ -19,8 +20,8 @@
   width: 0.5rem;
   height: 0.5rem;
   border: 2px solid;
-  border-radius: 50%;
   box-sizing: border-box;
+  border-radius: 50%;
 }
 
 .login.loading {
