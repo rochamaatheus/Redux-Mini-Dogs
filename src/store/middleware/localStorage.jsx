@@ -3,7 +3,7 @@ const localStorage = (store) => (next) => (action) => {
   const { meta } = action;
   if (meta && meta.localStorage) {
     const { key, value } = meta.localStorage;
-    localStorage.setItem(key, JSON.stringify(value));
+    window.localStorage.setItem(key, JSON.stringify(value));
   }
   return r;
 };
