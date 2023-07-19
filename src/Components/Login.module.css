@@ -11,13 +11,13 @@
 }
 
 .input {
-  display: block;
   border: 1px solid;
   border-radius: 3px;
   width: 100%;
   padding: 0.5rem;
   box-sizing: border-box;
   margin-bottom: 0.5rem;
+  display: block;
 }
 
 .button {
