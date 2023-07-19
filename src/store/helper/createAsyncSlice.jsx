@@ -1,5 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+/**
+ * Cria um slice com uma função assíncrona
+ * @param {Object} config
+ * @param {String} config.name
+ * @param {Object} config.initialState
+ * @param {Object} config.reducers
+ * @param {Function} config.fetchConfig
+ */
 const createAsyncSlice = (config) => {
   const slice = createSlice({
     name: config.name,
@@ -12,7 +20,6 @@ const createAsyncSlice = (config) => {
     reducers: {
       fetchStarted(state) {
         state.loading = true;
-        state.error = null;
       },
       fetchSuccess(state, action) {
         state.loading = false;
@@ -36,9 +43,9 @@ const createAsyncSlice = (config) => {
       const { url, options } = config.fetchConfig(payload);
       const r = await fetch(url, options);
       const data = await r.json();
-      dispatch(fetchSuccess(data));
-    } catch (err) {
-      dispatch(fetchError(err.message));
+      return dispatch(fetchSuccess(data));
+    } catch (error) {
+      return dispatch(fetchError(error.message));
     }
   };
 
