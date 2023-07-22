@@ -27,6 +27,11 @@ O mini projeto inclui o login do usuário do site Dogs e um botão para carregar
 
 - **Visualização de Postagens**: É possível visualizar todas as postagens do site Dogs.
 
+## Pré-requisitos
+* [Vite](https://vitejs.dev)
+* [React](https://react.dev)
+* [Redux](https://redux.js.org)
+
 ## Contato
 
 Se você tiver alguma dúvida ou precisar de assistência adicional, fique à vontade para entrar em contato através do LinkedIn, Instagram ou por e-mail. As informações de contato estão disponíveis na minha página principal do GitHub.
